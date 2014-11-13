@@ -1,0 +1,16 @@
+stack 1
+stack 2
+stack 3
+
+stack 1 -- 5 spots one fills from base every minute, on the fifth minute the last marbile goes to the next row.
+
+stack 2 -- 12 spots one drops from top every 5 minutes, on the 60th minute the 12th marbile drops to the next row.
+
+stack 3 -- 12 spots the 13th marble resets the clock (completes the 12 hour cycle)
+
+Procedure InitStack;
+Begin
+ IsEmpty := false;
+ If (topPointer = 0) then
+  IsEmpty := true;
+End; 
