@@ -7,6 +7,7 @@ const
 	MAX_SIZE = 200;
 var
 	i : integer;
+	x : integer;
 	numOfMarbles : integer = 0;
 	marbles : array[1..MAX_SIZE] of integer;
 	marbleStackOne :  array[1..maxSizeStackOne] of integer;
@@ -31,18 +32,9 @@ Begin
    			topPointer := topPointer + 1;
   		End;
 End;
-Procedure MoveStackOne(item : integer);
+Function GetSize(item : integer);
 Begin
-	for x := 0 to maxSizeStackOne do
-		Begin 
-			marbleStackOne[topPointer+1] :=item;
-			topPointer := topPointer + 1;
-			marbles[topPointer-1];
-		End;  
-End;
-Function GetSize : Integer;
-Begin
- 	GetSize := topPointer;
+ 	GetSize := item;
 End;
 Begin
 	writeln('Enter the number of marbles in reservoir:');
@@ -58,9 +50,8 @@ Begin
 	writeln('Press Enter to start');	
 	readln();
 	for x := 0 to maxSizeStackOne do
-		InitStack();
 		Begin
-		MoveStackOne(x);
 		write(GetSize());
+		readln();
 		End;
 End.
